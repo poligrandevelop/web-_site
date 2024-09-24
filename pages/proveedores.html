@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/registro.css ">
+    <title>Registro</title>
+</head>
+<body class="registro-body">
+    <div class="form-container">
+        <h1 class="registro-title">Registro de Proveedores</h1>
+        <form action="mailto:tu_email@example.com" method="post" enctype="text/plain" class="registro-form">
+            
+            <label for="nombre" class="registro-label">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required class="registro-input">
+            
+            <label for="producto" class="registro-label">Producto/Servicio:</label>
+            <input type="text" id="producto" name="producto" required class="registro-input">
+            
+            <label for="telefono" class="registro-label">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" class="registro-input">
+            
+            <label for="email" class="registro-label">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required class="registro-input">
+            
+            <label for="direccion" class="registro-label">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" class="registro-input">
+            
+            <label for="website" class="registro-label">Sitio Web:</label>
+            <input type="url" id="website" name="website" class="registro-input">
+            
+            <button type="submit" class="registro-button">Registrar</button>
+        </form>
+    </div>
+
+    <script src="../scripts/registro.js"></script>
+</body>
+</html>

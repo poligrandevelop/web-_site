@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="img/logoCYECOM.png" type="image/x-icon">
+    <title>CYECOM S.A.S</title>
+    <script src="js/index.js" defer></script>
+</head>
+
+<body>
+    <iframe src="pages/nav.html" class="nav-iframe"></iframe>
+
+    <div class="wrapper">
+        <div class="main-container">
+            
+
+            <aside id="aside-container">
+                <button class="back-button btn btn-info" id="backToDefault">Volver al inicio</button>
+                <iframe src="pages/servicios.html" class="aside-iframe"></iframe>
+                
+            </aside>
+            
+            <main class="main-content" id="main-content">
+                <iframe class="main-iframe" name="content-frame" src="pages/slider.html"></iframe>
+            </main>
+        </div>
+        <button id="scrollToTop" class="back-button btn btn-info" style="display: none;">Subir</button>
+
+        <iframe src="pages/footer.html" class="footer-iframe"></iframe>
+    </div>
+</body>
+
+</html>

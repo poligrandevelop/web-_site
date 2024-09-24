@@ -1,0 +1,97 @@
+/* Fondo general para la página */
+.main-body {
+    background: linear-gradient(145deg, #141e30, #243b55);
+    font-family: 'Exo', sans-serif;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Sección principal con caja y efecto 3D */
+.init_info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 80%;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+/* Estructura de cada bloque de contenido */
+.section-box {
+    background: rgba(20, 30, 48, 0.9);
+    border: 1px solid #00e6e6;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 255, 204, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Iconos futuristas */
+.icono {
+    font-size: 50px;
+    color: #00e6e6;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+/* Estilo para los títulos */
+h2 {
+    color: #00e6e6;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Estilo para los párrafos */
+p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Efectos 3D al pasar el mouse */
+.section-box:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(0, 255, 204, 0.6);
+}
+
+.section-box:hover .icono {
+    color: #ffffff;
+}
+
+/* Información extra de la empresa */
+.info-extra {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.info-extra p {
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+/* Lista adicional */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul li {
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 10px;
+    border-bottom: 1px solid #00e6e6;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}

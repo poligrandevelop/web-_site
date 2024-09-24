@@ -1,0 +1,70 @@
+.body_cliente {
+    background-color: #0d0d0d;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 40px;
+    color: #00d4ff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 4px 4px 8px rgba(0, 212, 255, 0.7), 0px 0px 10px rgba(0, 255, 255, 0.5);
+    transform: perspective(400px) rotateX(15deg);
+}
+
+.card-container {
+    display: flex; /* Usar flex para alinear las tarjetas horizontalmente */
+    justify-content: center; /* Centrar las tarjetas */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.cliente-card {
+    width: 350px; /* Ancho de la tarjeta */
+    padding: 20px;
+    background-color: rgba(10, 10, 10, 0.9);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.cliente-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.5);
+    transform: perspective(300px) rotateY(15deg);
+}
+
+.cliente-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00ffae;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 6px rgba(0, 255, 174, 0.7);
+}
+
+.cliente-card p {
+    font-size: 16px;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2);
+}
+
+.cliente-card:hover {
+    transform: perspective(1000px) rotateY(15deg) translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 255, 255, 0.8);
+}

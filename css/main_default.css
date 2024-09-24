@@ -1,0 +1,144 @@
+/* Fondo general para la página */
+.main-body {
+    background: linear-gradient(145deg, #0f0c29, #302b63, #24243e);
+    font-family: 'Exo', sans-serif;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Cambiado a flex-start para que se alinee con el contenido */
+    height: auto; /* Ajustar la altura a auto */
+    margin: 0;
+    padding: 20px; /* Agregar padding para evitar que el contenido esté pegado al borde */
+}
+
+/* Sección principal con burbujas */
+.init_info {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto; /* Centra la sección */
+}
+
+/* Contenedor de burbujas */
+.bubble-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Estilo para cada burbuja */
+.bubble {
+    background: rgba(20, 30, 48, 0.9);
+    border-radius: 25px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 255, 204, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Burbuja izquierda */
+.bubble.left {
+    margin-left: 20px;
+}
+
+/* Burbuja derecha */
+.bubble.right {
+    margin-right: 20px;
+}
+
+/* Iconos futuristas */
+.icono {
+    font-size: 50px;
+    color: #00e6e6;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+/* Estilo para los títulos */
+h2 {
+    color: #00e6e6;
+    font-size: 2.5rem; /* Tamaño de fuente aumentado */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Estilo para los párrafos */
+p {
+    color: #ffffff;
+    font-size: 1.3rem; /* Tamaño de fuente aumentado */
+    line-height: 1.6;
+}
+
+/* Efectos 3D al pasar el mouse */
+.bubble:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(0, 255, 204, 0.6);
+}
+
+/* Efecto para el icono al pasar el mouse */
+.bubble:hover .icono {
+    color: #ffffff;
+}
+
+/* Información extra de la empresa */
+.info-extra {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.info-extra p {
+    font-size: 1.5rem; /* Tamaño de fuente aumentado */
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+/* Lista adicional */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul li {
+    color: #ffffff;
+    font-size: 1.2rem; /* Tamaño de fuente aumentado */
+    padding: 10px;
+    border-bottom: 1px solid #00e6e6;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+/* Animaciones zig-zag */
+.bubble.left {
+    animation: slideInLeft 0.5s ease;
+}
+
+.bubble.right {
+    animation: slideInRight 0.5s ease;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

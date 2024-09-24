@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("/img/paisaje_fondo1.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Arial", sans-serif;
+    color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el contenedor principal ocupe toda la altura */
+}
+
+.nav-iframe {
+    height: 100px;
+    width: 100%;
+    border: none;
+}
+
+.main-container {
+    display: flex;
+    flex: 1; /* Permite que este contenedor crezca para llenar el espacio */
+}
+
+#main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Altura fija para el main */
+    overflow: auto; /* Permite el desplazamiento del contenido */
+}
+
+#aside-container {
+    flex: 0 0 250px;
+    width: auto; 
+    background: #2c2c2c; /* Color oscuro */
+    position: initial;
+    height: calc(70vh - 100px); /* Aumentar la altura */
+    overflow: hidden; 
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6); /* Efecto 3D */
+}
+
+.aside-iframe {
+    width: 100%;
+    height: calc(100% - 60px);
+    border: none;
+    font-size: 20px;
+    color: #fff;
+}
+.back-button {
+    margin: 10px; /* Espaciado para el botón */
+}
+
+.main-iframe {
+    width: 100%;
+    height: calc(100% - 50px); /* Ajusta la altura del iframe según el espacio del botón */
+    border: none;
+}
+
+.footer-iframe {
+    height: 100px;
+    width: 100%;
+    border: none;
+}
+
+.scroll-to-top {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.scroll-to-top.show {
+    display: block; /* Mostrar cuando se hace scroll */
+}
+
+.back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}

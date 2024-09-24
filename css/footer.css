@@ -1,0 +1,61 @@
+/* ========================= */
+/* Estilos del Footer        */
+/* ========================= */
+footer {
+    background-color: #001f3fe6;
+    color: white;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100px;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#footer-container {
+    background-color: inherit;
+    width: 100%;
+    border: none;
+}
+
+.container_footer {
+    display: flex;
+    justify-content: space-around; 
+    width: 100%;
+    height: auto; 
+    margin-top: 10px;
+    text-align: center;
+}
+
+.footer-block {
+    flex: 1; 
+    text-align: center; 
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+.footer-block p {
+    padding-top: 5%;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer-logo {
+    max-width: 50px;
+    width: auto;
+    height: auto;
+}
+.linkedin-link {
+    color: white;
+    text-decoration: none;
+}
+
+.linkedin-link:hover {
+    text-decoration: underline;
+}
+
+.footer-iframe{
+    margin-top: auto;
+}

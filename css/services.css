@@ -1,0 +1,28 @@
+h1 {
+    font-size: 60px; /* Aumentar tamaño de la fuente */
+    margin-bottom: 10px; /* Mayor espacio debajo */
+    font-weight: 900; /* Aumentar grosor del texto */
+    text-align: center;
+    color: #ffffff; /* Cambiar color a blanco para mayor contraste */
+    background-color: #084c61; /* Un color más oscuro para mayor contraste con el texto */
+    padding: 10px; /* Añadir relleno para destacar el fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Sombra más intensa y notoria */
+}
+
+aside a {
+    display: block;
+    padding: 8px;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #e0e0e0;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 20px;
+}
+
+aside a:hover {
+    transform: translateY(-5px);
+    background-color: rgba(53, 139, 220, 0.372); /* Fondo en hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Efecto 3D */
+}

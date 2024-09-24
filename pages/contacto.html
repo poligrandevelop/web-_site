@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/contactenos.css">
+    <title>Contacto</title>
+</head>
+<body class="contacto-body">
+    <main class="contacto-main">
+        <h2 class="contacto-title">Contacto</h2>
+        <form action="mailto:example@example.com" method="post" enctype="text/plain" class="contacto-form">
+            <label for="nombre" class="contacto-label">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required class="contacto-input">
+            
+            <label for="telefono" class="contacto-label">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required class="contacto-input">
+            
+            <label for="empresa" class="contacto-label">Empresa:</label>
+            <input type="text" id="empresa" name="empresa" class="contacto-input">
+            
+            <label for="email" class="contacto-label">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required class="contacto-input">
+            
+            <label for="asunto" class="contacto-label">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" class="contacto-input">
+            
+            <label for="comentario" class="contacto-label">Comentario:</label>
+            <textarea id="comentario" name="comentario" class="contacto-textarea"></textarea>
+            
+            <button type="submit" class="contacto-button">Enviar</button>
+        </form>
+    </main>
+
+    <script src="../scripts/contacto.js"></script>
+</body>
+</html>

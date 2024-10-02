@@ -1,37 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <div id="head-container"></div>
-    
-    <script>
-        fetch('head.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('head-container').innerHTML = data;
-            });
-    </script>
 
     <body>
-        <div id="nav-container"></div>
-        <script>
-            fetch('nav.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('nav-container').innerHTML = data;
-                });
-        </script>
 
         <main>
             <h2>Radio Enlaces</h2>
             <p>Descripción de los servicios de radio enlaces...</p>
         </main>
 
-        <div id="footer-container"></div>
-        <script>
-            fetch('footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-container').innerHTML = data;
-                });
-        </script>
+
     </body>
 </html>

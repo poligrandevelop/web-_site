@@ -1,64 +1,147 @@
+/* Estilo general del cuerpo */
 .body_slider {
-    background-color: transparent;
-    color: #161616;
-    height: 100vh;
+    background-color: #20232a; /* Fondo gris oscuro con toque moderno */
+    color: #e6e6e6; /* Texto en gris claro para buen contraste */
+    height: auto;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container_slider {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden !important;
+/* Contenedor del carrusel */
+.container {
+    max-width: 1100px;
     text-align: center;
+    padding: 20px;
 }
 
+/* Imágenes del carrusel */
 .carousel-item img {
     width: 100%;
-    height: 800px;
+    height: auto;
     object-fit: cover;
-    max-height: 60vh;
+    max-height: 500px;
+    border-radius: 12px;
+    margin: 0 auto; /* Centrar las imágenes */
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3)); /* Sombra ligera y moderna */
 }
 
+/* Contenedor de la descripción y títulos */
 .carousel-caption {
-    background-color: rgba(21, 117, 139, 0.826);
-    border-radius: 10px;
-    padding: 10px;
+    background-color: rgba(34, 45, 50, 0.85); /* Fondo oscuro translúcido con un toque metálico */
+    border-radius: 12px;
+    padding: 15px;
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-h1 {
-    font-size: 4rem;
-    color: #181616;
-    font-style: oblique;
-    font-weight: 800;
-}
-
-h5 {
-    margin-bottom: 30px;
-    font-size: 2rem;
-    color: #15073f;
-    font-style: oblique;
-}
-
-p {
-    margin-bottom: 30px;
-    font-size: 18px;
-    color: #fafafa;   
-    
-}
-
-.carousel-inner {
+/* Título principal del carrusel */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00bcd4; /* Cian moderno, atractivo y elegante */
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
     text-align: center;
 }
 
-.carousel {
-    max-height: 90vh;
-    overflow: hidden;
+/* Subtítulo de cada slide */
+h5 {
+    font-size: 1.6rem;
+    color: #f0f0f0; /* Gris muy claro */
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Descripción de cada slide */
+p {
+    font-size: 1.1rem;
+    color: #e0e0e0; /* Gris claro para un look moderno */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Indicadores del carrusel (los puntos de navegación) */
+.carousel-indicators button {
+    background-color: #00bcd4; /* Color cian para un toque de modernidad */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* Botones de navegación del carrusel (anterior y siguiente) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #00bcd4; /* Cian para acentuar la navegación */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+/* Filtro más sutil sobre las imágenes */
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(144, 19, 254, 0.25), rgba(144, 19, 254, 0.25)); /* Filtro violeta reducido */
+    border-radius: 12px;
+    z-index: 1;
+}
+
+/* Texto sobre las imágenes */
+.carousel-caption {
+    position: relative;
+    z-index: 2;
+}
+
+/* Ajuste en pantallas más pequeñas */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+    h5 {
+        font-size: 1.4rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .carousel-item img {
+        max-height: 300px;
+    }
+}
+
+/* Estilo para el título principal con ondas en gama de azules */
+h2 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(50deg, #00c3ff, #0066ff, #001f54, #39a0ed); /* Gama de azules */
+    background-size: 400%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: wave 5s ease-in-out infinite;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+/* Animación de ondas */
+@keyframes wave {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
 }

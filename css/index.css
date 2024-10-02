@@ -1,108 +1,86 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
+
 
 body {
-    background: url("/img/paisaje_fondo1.jpg") no-repeat center center fixed;
+    background: url("../img/paisaje_fondo1.jpg") no-repeat center center fixed !important;
+    background: linear-gradient(145deg, #141e30, #243b55);
     background-size: cover;
-    font-family: "Arial", sans-serif;
-    color: #f0f0f0;
-    overflow-x: hidden;
+    margin: auto;
+    height: 100vh;
+    justify-content: start;
 }
-
-.wrapper {
+/* Botones de acción */
+.div_buttom {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Asegura que el contenedor principal ocupe toda la altura */
+    align-items: flex-start;
+    margin-bottom: 20px;
 }
 
-.nav-iframe {
-    height: 100px;
-    width: 100%;
-    border: none;
+.div_buttom a,
+.div_buttom button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.main-container {
-    display: flex;
-    flex: 1; /* Permite que este contenedor crezca para llenar el espacio */
+.div_buttom a {
+    background-color: #05b779;
+    color: white;
+    text-decoration: none;
 }
 
-#main-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    height: auto; /* Altura fija para el main */
-    overflow: auto; /* Permite el desplazamiento del contenido */
+.div_buttom button {
+    background-color: #136877;
+    color: white;
 }
 
-#aside-container {
-    flex: 0 0 250px;
-    width: auto; 
-    background: #2c2c2c; /* Color oscuro */
-    position: initial;
-    height: calc(70vh - 100px); /* Aumentar la altura */
-    overflow: hidden; 
-    border-radius: 12px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6); /* Efecto 3D */
-}
-
-.aside-iframe {
-    width: 100%;
-    height: calc(100% - 60px);
-    border: none;
-    font-size: 20px;
-    color: #fff;
-}
-.back-button {
-    margin: 10px; /* Espaciado para el botón */
-}
-
-.main-iframe {
-    width: 100%;
-    height: calc(100% - 50px); /* Ajusta la altura del iframe según el espacio del botón */
-    border: none;
-}
-
-.footer-iframe {
-    height: 100px;
-    width: 100%;
-    border: none;
-}
-
-.scroll-to-top {
-    display: none; /* Oculto por defecto */
+/* boton de subir */
+#scrollToTop {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #007bff;
+    background-color: #1a5080;
     color: white;
-    border: none;
     border-radius: 5px;
     padding: 10px;
-    cursor: pointer;
+    font-size: 100%;
+    display: none;
+    border-radius: 50%;
+}
+.main_principal {
+    width: 70%; /* Ocupa todo el ancho disponible */
+    margin: 0 ; /* Sin margen, ocupa el espacio completo de la columna */
+    padding: 0; /* Sin relleno */
+    box-sizing: border-box; /* Asegura que el ancho y el alto incluyan el padding y el borde */
+    min-height: 65vh; /* Altura mínima igual a la ventana del navegador */
+    background-color: transparent !important; /* Color de fondo transparente */
+    overflow: hidden; /* Oculta el desbordamiento */
 }
 
-.scroll-to-top.show {
-    display: block; /* Mostrar cuando se hace scroll */
+aside {
+    height: auto; /* Permite que el aside se ajuste a su contenido */
 }
 
-.back-button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s, transform 0.3s;
+iframe {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    border: none; /* Sin borde */
+    padding: 0; /* Sin relleno */
+    margin-top: 5%;
+    display: block; /* Comportamiento de bloque */
+    height: calc(100vh - 100px); /* Altura dinámica, ajusta según tu diseño */
+    min-height: 1800px; /* Altura mínima */
 }
 
-.back-button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+.container-fluid {
+    display: flex; /* Flexbox para alinear los elementos */
+}
+
+.row {
+    flex-grow: 1; /* Permite que la fila crezca según el contenido */
 }

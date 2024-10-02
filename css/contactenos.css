@@ -5,8 +5,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    height: auto; /* Cambiado de 100vh para que se ajuste al contenido */
+    margin: 20px 0 0 20%; /* Agregado margen para separación */
 }
 
 /* Main container for the form */
@@ -41,7 +41,8 @@
 }
 
 /* Input and textarea with neon effect */
-.contacto-input, .contacto-textarea {
+.contacto-input,
+.contacto-textarea {
     width: 100%;
     padding: 15px;
     background: rgba(255, 255, 255, 0.1);
@@ -55,7 +56,8 @@
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.contacto-input:focus, .contacto-textarea:focus {
+.contacto-input:focus,
+.contacto-textarea:focus {
     box-shadow: 0 0 20px rgba(0, 255, 204, 1);
     transform: translateY(-3px);
 }

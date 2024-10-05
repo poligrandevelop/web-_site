@@ -1,24 +1,25 @@
-/* Fondo general para la página */
+/* Fondo general para la página  de informacion de inicio: mision, vision, quienes somos*/
+
 .main-body {
-    background: linear-gradient(145deg, #0f0c29, #302b63, #24243e);
+    background: linear-gradient(145deg, #0f0c29, #302b63fb, #24243e);
     font-family: 'Exo', sans-serif;
-    color: #ffffff;
+    color: #ffffff78;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Cambiado a flex-start para que se alinee con el contenido */
-    height: auto; /* Ajustar la altura a auto */
-    margin: 0;
-    padding: 20px; /* Agregar padding para evitar que el contenido esté pegado al borde */
+    align-items: start; /* Cambiado a flex-start para que se alinee con el contenido */
+    height: 1200px; /* Ajustar la altura a auto */
+    margin: auto;
+    
 }
 
-/* Sección principal con burbujas */
+/* Sección principal con burbujas  tamaño de las secciones*/
 .init_info {
     width: 80%;
-    max-width: 1000px;
-    margin: 0 auto; /* Centra la sección */
+    max-width: auto;
+    margin: 0 auto; 
 }
 
-/* Contenedor de burbujas */
+/* Contenedor de burbujas separacion de las secciones */
 .bubble-container {
     position: relative;
     display: flex;
@@ -26,7 +27,7 @@
     gap: 40px;
 }
 
-/* Estilo para cada burbuja */
+/* Estilo para cada burbuja , diseño principal*/
 .bubble {
     background: rgba(20, 30, 48, 0.9);
     border-radius: 25px;
@@ -47,10 +48,10 @@
     margin-right: 20px;
 }
 
-/* Iconos futuristas */
+
 .icono {
-    font-size: 50px;
-    color: #00e6e6;
+    font-size: 100px;
+    color: #00e6e656;
     margin-bottom: 20px;
     transition: color 0.3s ease;
 }
@@ -82,10 +83,10 @@ p {
     color: #ffffff;
 }
 
-/* Información extra de la empresa */
+/* Información extra de la empresa principal*/
 .info-extra {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 140px;
 }
 
 .info-extra p {
@@ -94,7 +95,8 @@ p {
     margin-bottom: 10px;
 }
 
-/* Lista adicional */
+
+/* Lista adicional  informacion adicional del main_default*/
 ul {
     list-style-type: none;
     padding: 0;
@@ -103,7 +105,7 @@ ul {
 
 ul li {
     color: #ffffff;
-    font-size: 1.2rem; /* Tamaño de fuente aumentado */
+    font-size: 1.2rem; 
     padding: 10px;
     border-bottom: 1px solid #00e6e6;
 }

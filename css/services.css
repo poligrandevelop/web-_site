@@ -1,28 +1,58 @@
-h1 {
-    font-size: 60px; /* Aumentar tamaño de la fuente */
-    margin-bottom: 10px; /* Mayor espacio debajo */
-    font-weight: 900; /* Aumentar grosor del texto */
-    text-align: center;
-    color: #ffffff; /* Cambiar color a blanco para mayor contraste */
-    background-color: #084c61; /* Un color más oscuro para mayor contraste con el texto */
-    padding: 10px; /* Añadir relleno para destacar el fondo */
+/* Ajuste del aside para que siempre sea visible */
+aside {
+    border-radius: 20px;
+    box-shadow:  5px 15px 15px 5px rgba(63, 56, 56, 0.458);
+    overflow: hidden;
+    padding: 5px;
+    height: auto;
+    width: auto;
+    background-color: transparent !important; /* Fondo transparente */
+    padding: 20px; /* Añadir relleno al aside */
     border-radius: 10px; /* Bordes redondeados */
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Sombra más intensa y notoria */
+}
+
+h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+    font-weight: 900;
+    text-align: center;
+    color: #ffffff; /* Color blanco para mayor contraste */
+    background-color: rgba(60, 136, 128, 0.9); /* Fondo más oscuro y con menos transparencia */
+    padding: 10px;
+    border-radius: 10px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 }
 
 aside a {
     display: block;
-    padding: 8px;
+    padding: 10px;
     margin: 10px 0;
     text-decoration: none;
-    color: #e0e0e0;
+    color: #ffffff; /* Color del texto de los enlaces en blanco */
+    background-color: rgba(30, 30, 30, 0.7); /* Fondo del enlace oscuro y semi-transparente */
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s;
     font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    font-weight: 700;
 }
 
 aside a:hover {
     transform: translateY(-5px);
-    background-color: rgba(53, 139, 220, 0.372); /* Fondo en hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Efecto 3D */
+    background-color: rgba(81, 54, 57, 0.9); /* Fondo más oscuro en hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
+
+/* Responsive adjustments */
+@media (max-width: 1260px) {
+    aside {
+        font-size: 18px; /* Tamaño de fuente para pantallas más pequeñas */
+    }
+
+    h1 {
+        font-size: 45px; /* Ajustar el tamaño de h1 */
+    }
+}
+
+

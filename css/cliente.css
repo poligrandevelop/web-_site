@@ -1,5 +1,5 @@
 .body_cliente {
-    background-color: #0d0d0d;
+    background-color: #0d0d0de4;
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
     margin: 0;
@@ -8,8 +8,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    overflow: hidden;
+    height: auto; /* Permitir que la altura se ajuste automáticamente */
+    overflow: hidden; /* Prevenir el desbordamiento */
 }
 
 h1 {
@@ -25,7 +25,8 @@ h1 {
 .card-container {
     display: flex; /* Usar flex para alinear las tarjetas horizontalmente */
     justify-content: center; /* Centrar las tarjetas */
-    gap: 20px; /* Espacio entre las tarjetas */
+    gap: 30px; /* Espacio entre las tarjetas (ajustar según sea necesario) */
+    flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan en pantallas más pequeñas */
 }
 
 .cliente-card {
@@ -38,13 +39,16 @@ h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform-style: preserve-3d;
     perspective: 1000px;
+    margin-bottom: 30px; /* Margen inferior para espacio entre filas de tarjetas */
 }
 
+
 .cliente-card img {
-    width: 100px;
-    height: 100px;
+    width: auto;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
+    overflow: hidden;
     margin-bottom: 20px;
     box-shadow: 0 5px 15px rgba(0, 255, 255, 0.5);
     transform: perspective(300px) rotateY(15deg);
@@ -68,3 +72,4 @@ h1 {
     transform: perspective(1000px) rotateY(15deg) translateY(-10px) scale(1.05);
     box-shadow: 0 15px 30px rgba(0, 255, 255, 0.8);
 }
+

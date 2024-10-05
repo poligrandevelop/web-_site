@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('nav');
     const asideLinks = document.querySelectorAll('.aside-link');
     const mainContent = document.getElementById('main-content');
-    
+
     if (hamburger && nav) {
         hamburger.addEventListener('click', () => {
             nav.classList.toggle('active');
@@ -44,11 +44,26 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(nextSlide, 3000);
     }
 
-    document.getElementById('productos-btn').onclick = function() {
-        document.getElementById('content-frame').src = 'pages/slider.html'; // Ajusta la ruta al slider
+    const productosBtn = document.getElementById('productos-btn');
+    if (productosBtn) {
+        productosBtn.onclick = function () {
+            document.getElementById('content-frame').src = 'pages/slider.html';
+        };
+    }
+
+    const inicioBtn = document.getElementById('inicio-btn');
+    if (inicioBtn) {
+        inicioBtn.onclick = function () {
+            document.getElementById('content-frame').src = 'pages/main_default.html';
+        };
+    }
+
+    const iframe = document.querySelector('iframe[name="content-frame"]');
+
+    iframe.onload = function () {
+        const body = iframe.contentWindow.document.body;
+        iframe.style.height = body.scrollHeight + 'px'; // Ajusta la altura al contenido
     };
 
-    document.getElementById('inicio-btn').onclick = function() {
-        document.getElementById('content-frame').src = 'pages/main_default.html'; // Ruta a la información inicial
-    };
+
 });

@@ -1,22 +1,28 @@
 /* Fondo general para la página  de informacion de inicio: mision, vision, quienes somos*/
 
 .main-body {
-    background: linear-gradient(145deg, #0f0c29, #302b63fb, #24243e);
+    background: linear-gradient(145deg, #0f0c2972, #302b6372, #24243e76);
     font-family: 'Exo', sans-serif;
     color: #ffffff78;
     display: flex;
     justify-content: center;
-    align-items: start; /* Cambiado a flex-start para que se alinee con el contenido */
-    height: 1200px; /* Ajustar la altura a auto */
+    padding: 6%;
+    margin-top: 10%;
+    align-items: start;
+    height: 100%;
+    /* Cambiado a auto para que se alinee con el contenido */
     margin: auto;
-    
 }
+
+/* Resto del CSS en este archivo está bien, pero puedes ajustar */
+
 
 /* Sección principal con burbujas  tamaño de las secciones*/
 .init_info {
     width: 80%;
     max-width: auto;
-    margin: 0 auto; 
+    height: 110vmin;
+    margin: 0 auto;
 }
 
 /* Contenedor de burbujas separacion de las secciones */
@@ -59,7 +65,8 @@
 /* Estilo para los títulos */
 h2 {
     color: #00e6e6;
-    font-size: 2.5rem; /* Tamaño de fuente aumentado */
+    font-size: 2.5rem;
+    /* Tamaño de fuente aumentado */
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -68,7 +75,8 @@ h2 {
 /* Estilo para los párrafos */
 p {
     color: #ffffff;
-    font-size: 1.3rem; /* Tamaño de fuente aumentado */
+    font-size: 1.3rem;
+    /* Tamaño de fuente aumentado */
     line-height: 1.6;
 }
 
@@ -83,18 +91,6 @@ p {
     color: #ffffff;
 }
 
-/* Información extra de la empresa principal*/
-.info-extra {
-    text-align: center;
-    margin-top: 140px;
-}
-
-.info-extra p {
-    font-size: 1.5rem; /* Tamaño de fuente aumentado */
-    letter-spacing: 1.5px;
-    margin-bottom: 10px;
-}
-
 
 /* Lista adicional  informacion adicional del main_default*/
 ul {
@@ -105,7 +101,7 @@ ul {
 
 ul li {
     color: #ffffff;
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     padding: 10px;
     border-bottom: 1px solid #00e6e6;
 }
@@ -123,11 +119,23 @@ ul li:last-child {
     animation: slideInRight 0.5s ease;
 }
 
+.main_principal {
+    padding: 0;
+}
+
+/* Ajustes de diseño del iframe */
+iframe {
+    height: auto;
+    /* Ajuste de altura */
+}
+
+
 @keyframes slideInLeft {
     from {
         transform: translateX(-50%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -139,8 +147,24 @@ ul li:last-child {
         transform: translateX(50%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
     }
+}
+
+@media (200px <=width <=1000px) {
+
+    .main-body {
+        background: linear-gradient(145deg, #0f0c2972, #302b6372, #24243e76);
+        font-family: 'Exo', sans-serif;
+        color: #ffffff78;
+        display: flex;
+        padding: 6%;
+        height: 100%;
+        width: 90%;
+        margin: auto;
+    }
+
 }

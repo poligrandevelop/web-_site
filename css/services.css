@@ -1,48 +1,188 @@
-/* Ajuste del aside para que siempre sea visible */
+/* Botón de cerrar/abrir */
+.close-open {
+    border-radius: 12px;
+    margin-bottom: 20px;
+    margin: 8%;
+    width: auto;
+    background: linear-gradient(135deg, rgba(0, 51, 102, 0.575), rgba(0, 75, 50, 0.542));
+    color: #ffffff;
+    transition: transform 0.3s ease, background 0.3s ease;
+    font-size: 1em;
+    padding: 5px 10px;
+    text-align: center;
+    border: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.526);
+}
+
+.close-open:hover {
+    background: linear-gradient(135deg, rgba(0, 75, 100, 0.444), rgba(0, 100, 60, 0.444));
+    transform: scale(1.05);
+}
+
+/* Información extra de la empresa principal */
+.info-aside-extra {
+    text-align: center; /* Centrar el contenido */
+    margin-top: 5%; /* Margen superior */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 12px; /* Bordes redondeados */
+    background: linear-gradient(135deg, rgba(200, 220, 240, 0.46), rgba(180, 217, 230, 0.367)); /* Fondo con opacidad */
+    box-shadow: 5px 15px 15px rgba(129, 117, 117, 0.5); /* Sombra suave */
+    font-size: 1.1em; /* Tamaño de fuente */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
+    transition: background 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+.info-aside-extra:hover {
+    background: linear-gradient(135deg, rgba(180, 217, 230, 0.603), rgba(160, 200, 240, 0.455)); /* Color más claro al pasar el ratón */
+    transform: scale(1.02); /* Efecto de aumento al pasar el ratón */
+}
+
+.info-aside-extra a {
+    color: #2c3e50; /* Color del texto de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.info-aside-extra a:hover {
+    color: #2980b9; /* Color más claro al pasar el ratón */
+}
+
+
+/* Si deseas ocultar el contenido */
+.hidden {
+    display: none;
+}
+
+/* Lista adicional  informacion adicional del main_default*/
+ul {
+    padding: 0;
+    margin-top: 20px;
+    list-style: none;
+}
+
+ul li {
+    color: #020154;
+    font-size: 1.5rem; 
+    padding: 10px;
+    font-weight: 800;
+    border-bottom: 3px solid #00e6e6;
+    text-shadow: 2px 3px #fffefe93;
+    text-decoration: none;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
 aside {
     border-radius: 20px;
-    box-shadow:  5px 15px 15px 5px rgba(63, 56, 56, 0.458);
+    background: linear-gradient(135deg, rgba(36, 60, 84, 0.107), rgba(180, 217, 230, 0.167)); /* Fondo con opacidad */
     overflow: hidden;
     padding: 5px;
     height: auto;
-    width: auto;
-    background-color: transparent !important; /* Fondo transparente */
+    width: auto !important;
     padding: 20px; /* Añadir relleno al aside */
     border-radius: 10px; /* Bordes redondeados */
 }
 
-h1 {
-    font-size: 55px;
+h2 , h1 {
+    font-size: 1.5em;
     margin-bottom: 10px;
     font-weight: 900;
     text-align: center;
     color: #ffffff; /* Color blanco para mayor contraste */
-    background-color: rgba(60, 136, 128, 0.9); /* Fondo más oscuro y con menos transparencia */
+    background-color: rgba(60, 136, 128, 0.516); /* Fondo más oscuro y con menos transparencia */
     padding: 10px;
     border-radius: 10px;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    
+}
+h2:hover , h1:hover {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: 900;
+    text-align: center;
+    color: #ffffff; /* Color blanco para mayor contraste */
+    background-color: rgba(20, 20, 19, 0.516); /* Fondo más oscuro y con menos transparencia */
+    padding: 10px;
+    border-radius: 10px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.481);
 }
 
 aside a {
     display: block;
     padding: 10px;
     margin: 10px 0;
-    text-decoration: none;
     color: #ffffff; /* Color del texto de los enlaces en blanco */
-    background-color: rgba(30, 30, 30, 0.7); /* Fondo del enlace oscuro y semi-transparente */
+    background-color: rgba(30, 30, 30, 0.438); /* Fondo del enlace oscuro y semi-transparente */
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s;
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: oblique;
     font-weight: 700;
+    text-align: center;
 }
 
 aside a:hover {
     transform: translateY(-5px);
-    background-color: rgba(81, 54, 57, 0.9); /* Fondo más oscuro en hover */
+    background-color: rgba(42, 58, 65, 0.641); /* Fondo más oscuro en hover */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
+
+
+.btn2 {
+    border: none;
+    width: auto;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    z-index: 1;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+/* Botón de inicio - Estilo oscuro y elegante */
+.btn2_init_pag {
+    background: linear-gradient(135deg,
+            rgba(30, 30, 30, 0.686),   /* Negro suave */
+            rgba(18, 74, 127, 0.614),  /* Azul profundo */
+            rgba(10, 10, 10, 0.563));  /* Negro intenso */
+    border-radius: 12px; /* Bordes redondeados */
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.btn2_init_pag:hover {
+    background: linear-gradient(135deg,
+            rgba(24, 90, 145, 0.9),  /* Azul más brillante */
+            rgba(15, 15, 15, 0.566),   /* Negro intenso */
+            rgba(18, 18, 18, 0.499));  /* Negro profundo */
+    transform: scale(1);
+}
+
+/* Botón de información - Azul oscuro y verde jade */
+.btn2_information {
+    background: linear-gradient(135deg,
+            rgba(20, 20, 20, 0.589),   /* Negro elegante */
+            rgba(15, 60, 75, 0.9),   /* Verde jade oscuro */
+            rgba(18, 74, 127, 0.9));  /* Azul profundo */
+    border-radius: 12px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.btn2_information:hover {
+    background: linear-gradient(135deg,
+            rgba(25, 85, 100, 0.9),  /* Verde jade más claro */
+            rgba(24, 90, 145, 0.9),  /* Azul brillante */
+            rgba(15, 15, 15, 0.9));  /* Negro intenso */
+    transform: scale(1.05);
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 1260px) {
@@ -54,5 +194,3 @@ aside a:hover {
         font-size: 45px; /* Ajustar el tamaño de h1 */
     }
 }
-
-

@@ -12,8 +12,8 @@ header {
     padding: 10px;
     width: 100cqmax;
     height: auto;
-    z-index: 1000; /* Asegúrate de que el header esté en primer plano */
-    position: relative; /* Permite al z-index funcionar correctamente */
+    z-index: 1000;
+    position: relative;
 }
 
 .nav-logo {
@@ -37,9 +37,24 @@ header {
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
-.nav-en:hover {
-    background-color: #1ABC9C;
-}
 
 .offcanvas {
-    z-index: 1050 ;} 
+    z-index: 1050; 
+}
+
+
+.nav-en:hover {
+    text-decoration: underline;
+}
+
+.offcanvas-body {
+    padding: 10px;
+}
+
+.offcanvas-body a {
+    color: #ffffff;
+}
+
+.offcanvas-body a:hover {
+    color: #ccc;
+}

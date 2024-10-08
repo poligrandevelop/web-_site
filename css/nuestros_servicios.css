@@ -1,0 +1,91 @@
+/* Reset de márgenes y padding para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del body */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    background: linear-gradient(135deg, rgba(36, 60, 84, 0.107), rgba(180, 217, 230, 0.167)); /* Fondo con opacidad */
+    padding: 20px;
+}
+
+/* Estilo del header */
+header {
+    background-color: rgba(11, 118, 116, 0.344); /* Color rosa pastel claro */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Bordes redondeados para suavizar el diseño */
+}
+
+/* Títulos principales */
+h1 {
+    font-size: 2.5em;
+}
+
+/* Títulos de sección */
+h2 {
+    font-size: 1.8em;
+    color: #1b3431;
+    margin-top: 20px;
+    margin-bottom: 10px; /* Espacio inferior para descanso visual */
+}
+
+/* Estilo de párrafos */
+p {
+    margin-bottom: 15px;
+}
+
+/* Estilo de listas */
+ul {
+    list-style-type: square;
+    margin: 10px 0 20px 20px;
+}
+
+/* Estilo de las imágenes */
+img {
+    max-width: 25%;
+    height: 25%;
+    margin: 15px 0;
+}
+
+/* Estilos de los enlaces */
+a {
+    color: #0a223c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo de secciones */
+section {
+    background: linear-gradient(135deg, rgba(36, 60, 84, 0.107), rgba(180, 217, 230, 0.167)); /* Fondo con opacidad */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: darkslategrey 2px dotted;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}

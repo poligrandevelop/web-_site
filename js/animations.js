@@ -17,7 +17,7 @@ $(document).ready(function () {
         });
     }, 5000); // Parpadea, rota, crece y se desplaza cada 5 segundos
     
-   
+
     // Hacer parpadear, rotar, crecer y desplazar el logo del nav
     setInterval(function () {
         $('.nav-logo').fadeOut(300, function () {

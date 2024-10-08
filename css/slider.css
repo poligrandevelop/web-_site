@@ -1,11 +1,12 @@
 /* Estilo general del cuerpo */
 .body_slider {
-    background-color: #20232a; /* Fondo gris oscuro con toque moderno */
+    background-color: #00000194; /* Fondo gris oscuro con toque moderno */
     color: #e6e6e6; /* Texto en gris claro para buen contraste */
-    height: auto;
+    height: 80% !important;
     margin: 0;
-    padding: 0;
+    padding: 5%;
     display: flex;
+    align-items: center;
     justify-content: center;
     align-items: center;
 }
@@ -19,6 +20,7 @@
 
 /* Imágenes del carrusel */
 .carousel-item img {
+    
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -30,6 +32,8 @@
 
 /* Contenedor de la descripción y títulos */
 .carousel-caption {
+
+    margin-top: 5%;
     background-color: rgba(34, 45, 50, 0.85); /* Fondo oscuro translúcido con un toque metálico */
     border-radius: 12px;
     padding: 15px;
@@ -91,7 +95,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to right, rgba(144, 19, 254, 0.25), rgba(144, 19, 254, 0.25)); /* Filtro violeta reducido */
+    background: linear-gradient(to right, rgba(35, 19, 254, 0.25), rgba(19, 121, 254, 0.25)); /* Filtro violeta reducido */
     border-radius: 12px;
     z-index: 1;
 }

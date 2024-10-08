@@ -1,57 +1,112 @@
 .body_cliente {
-    background-color: #0d0d0de4;
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
+    background-color: #0d0d0d6a;
+    /* Fondo semitransparente */
+    height: 100vh;
+    /* 100% de la altura de la ventana visible */
+    width: 100vw;
+    /* 100% del ancho de la ventana visible */
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: auto; /* Permitir que la altura se ajuste automáticamente */
-    overflow: hidden; /* Prevenir el desbordamiento */
+    overflow-y: hidden;
+    /* Permite desplazamiento vertical si el contenido lo requiere */
+    box-sizing: border-box;
+    /* Asegura que el padding y el borde estén incluidos en las dimensiones */
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 20px rgba(210, 180, 140, 0.8), 0 0 30px rgba(163, 114, 79, 0.8), 0 0 40px rgba(223, 148, 72, 0.8);
+    }
+
+    50% {
+        text-shadow: 0 0 30px rgba(210, 180, 140, 1), 0 0 40px rgba(181, 123, 80, 0.763), 0 0 50px rgba(101, 67, 33, 1);
+    }
+
+    100% {
+        text-shadow: 0 0 20px rgba(210, 180, 140, 0.8), 0 0 30px rgba(161, 90, 38, 0.8), 0 0 40px rgba(149, 104, 60, 0.8);
+    }
 }
 
 h1 {
-    font-size: 50px;
-    margin-bottom: 40px;
-    color: #00d4ff;
+    font-size: 3em;
+    color: rgb(70, 128, 157);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     text-transform: uppercase;
     letter-spacing: 5px;
-    text-shadow: 4px 4px 8px rgba(0, 212, 255, 0.7), 0px 0px 10px rgba(0, 255, 255, 0.5);
-    transform: perspective(400px) rotateX(15deg);
+    font-family: 'Orbitron', sans-serif;
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.5);
+
+
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, rgba(210, 180, 140, 0.3), rgba(139, 69, 19, 0.3));
+    /* Tonos tierra */
+    top: 0;
+    left: -100%;
+    animation: infinite alternate-reverse ease-in-out, bounceAndMove 2s forwards 3s;
+    transition: left 0.5s ease;
+    z-index: 0;
+}
+
+h1:hover::before {
+    left: 0;
+}
+
+h1:hover {
+    animation: glow 2.5s infinite alternate !important;
+    /* Animación infinita */
+    color: #FAF3E0;
+    /* Color crema para el efecto hover */
+}
+
+/* Clientes Styles */
+.container {
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: hidden; /* Permite desplazamiento vertical si el contenido lo requiere */
+
 }
 
 .card-container {
-    display: flex; /* Usar flex para alinear las tarjetas horizontalmente */
-    justify-content: center; /* Centrar las tarjetas */
-    gap: 30px; /* Espacio entre las tarjetas (ajustar según sea necesario) */
-    flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan en pantallas más pequeñas */
+    display: flex;  
+    flex-direction: row;
+    width: 90%;
+    height: auto;
+    justify-content: center;
+    margin: 3%;
 }
 
 .cliente-card {
-    width: 350px; /* Ancho de la tarjeta */
-    padding: 20px;
-    background-color: rgba(10, 10, 10, 0.9);
+    width: 250px;
+    height: 250px;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform-style: preserve-3d;
     perspective: 1000px;
-    margin-bottom: 30px; /* Margen inferior para espacio entre filas de tarjetas */
+    margin: 1%;
+    padding: 0;    
+
 }
 
-
 .cliente-card img {
-    width: auto;
-    height: 250px;
+    width: 90%;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
-    overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     box-shadow: 0 5px 15px rgba(0, 255, 255, 0.5);
     transform: perspective(300px) rotateY(15deg);
+    filter: brightness(1) invert(0);
+    object-fit: contain;
+    position: relative;
+    mix-blend-mode: lighten;
 }
 
 .cliente-card h2 {
@@ -73,3 +128,89 @@ h1 {
     box-shadow: 0 15px 30px rgba(0, 255, 255, 0.8);
 }
 
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* Oculta la parte posterior cuando se gira */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 10px rgba(0, 212, 255, 0.5);
+
+}
+
+.front {
+    background-color: rgba(10, 10, 10, 0.663);
+    display: flexbox;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 212, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back {
+    background-color: rgba(30, 30, 30, 0.8);
+    /* Color de fondo de la parte posterior */
+    color: #e0e0e0;
+    /* Color del texto */
+    transform: rotateY(180deg);
+    /* Girar la parte posterior */
+    padding: 20px;
+    /* Espaciado interno */
+    text-align: center;
+    /* Centrar texto */
+}
+
+/* Efecto de giro al hacer hover */
+.cliente-card:hover .front {
+    transform: rotateY(150deg);
+    /* Gira la cara frontal */
+}
+
+.cliente-card:hover .back {
+    transform: rotateY(0deg);
+    /* Muestra la cara posterior */
+}
+
+/* Responsive Styles */
+@media (200px <=width <=1000px) {
+    h1 {
+        margin-top: 15%;
+        font-size: 1.5em;
+        color: rgb(13, 97, 139);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-family: 'Orbitron', sans-serif;
+        -webkit-text-stroke: 2px rgba(0, 0, 0, 0.5);
+    
+    }
+    /* Ajustes para pantallas más pequeñas */
+    .container {
+        padding: 10px;
+        width: 100%;
+        flex-grow: 1;
+        overflow: hidden;
+        border-radius: 5px;
+        margin: 5%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .card-container {
+        display: flex;  
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        margin: 2%;
+        padding: 6%;
+        margin-top: 2%;
+    
+    }
+}

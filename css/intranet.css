@@ -1,79 +1,100 @@
+/* Estilos generales del body para intranet */
 .body_intranet {
-    height: 100%; /* Altura total de la ventana */
-    margin: 10%;
-    background-color: #0d0d0d00;
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: auto;
     justify-content: center;
-    width: 100%;
-    max-height: 600px;
-    overflow: hidden; /* Prevenir el desbordamiento */
+    align-items: center;
+    margin: -25%;
+    padding: 0;
 }
 
+/* Contenedor del formulario */
 .login-container {
-    margin: 5%;
-    background-color: rgba(10, 10, 10, 0.8); /* Fondo más claro para el contenedor */
+    background-color: rgba(10, 10, 10, 0.526);
     border-radius: 20px;
-    padding: 40px; /* Mayor padding para más espacio */
-    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.6); /* Sombra más suave */
+    box-shadow: 0 10px 30px rgba(42, 91, 116, 0.329);
     text-align: center;
-    width: 400px;
-    max-height: 50%; /* Limitar la altura máxima del contenedor */
-    overflow: auto; /* Permitir el desplazamiento si el contenido es demasiado */
+    width: 50%;
+    
 }
 
+/* Estilo del título */
 h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #00d4ff; /* Color del título */
-    text-shadow: 2px 2px 5px rgba(0, 212, 255, 0.7); /* Sombra más suave */
+    color: #00d4ff;
+    text-shadow: 2px 2px 5px rgba(5, 50, 59, 0.7);
 }
 
+/* Grupo de inputs */
 .input-group {
-    margin-bottom: 20px;
+    display: flex;
     text-align: left;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2%;
 }
 
+/* Estilo de las etiquetas */
 label {
     display: block;
     margin-bottom: 5px;
-    color: #00ffae; /* Color de las etiquetas */
+    margin: 4%;
+    color: #c0deec;
 }
 
+/* Estilo de los campos de texto y contraseña */
 input[type="text"],
 input[type="password"] {
-    width: 100%;
-    padding: 12px; /* Aumentar el padding para mejorar la usabilidad */
+    width: 80%;
+    padding: 12px;
     border: none;
     border-radius: 10px;
-    background-color: rgba(21, 117, 139, 0.8); /* Color más oscuro para inputs */
+    background-color: rgba(14, 58, 68, 0.8);
     color: #ffffff;
     transition: background-color 0.3s ease;
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus {
-    background-color: rgba(21, 117, 139, 1); /* Cambio de color al enfocarse */
+    background-color: rgb(29, 53, 58);
     outline: none;
 }
 
+/* Botón de inicio de sesión */
 button {
-    background-color: #00d4ff; /* Color del botón */
+    background-color: #4991a0a3;
     color: #ffffff;
-    padding: 12px 20px; /* Aumentar padding del botón */
+    padding: 12px 20px 12px 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     font-size: 1rem;
+    margin: 5%;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-    background-color: #00b3cc; /* Color al pasar el mouse */
+    background-color: #14457db3;
     transform: translateY(-3px);
+}
+
+/* Efecto de animación al mover el mouse sobre los inputs */
+input[type="text"]:hover, input[type="password"]:hover {
+    box-shadow: 0 0 8px rgba(45, 59, 119, 0.8);
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
 }

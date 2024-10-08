@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css"> <!-- Cambia el enlace según tu archivo CSS -->
+    <title>Listar Proveedores</title>
+</head>
+
+<body>
+    <header>
+        <div id="welcome"></div>
+        <button id="logout">Cerrar Sesión</button>
+        <h1>Lista de Proveedores</h1>
+
+        <nav>
+            <a href="../index.html">Inicio</a>
+        </nav>
+    </header>
+
+    <button id="loadProviders">Cargar Proveedores</button>
+    <table id="providersTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Los registros de proveedores se llenarán aquí -->
+        </tbody>
+    </table>
+
+    <script src="js/listar_proveedores.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
